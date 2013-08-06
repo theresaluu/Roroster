@@ -1,0 +1,57 @@
+<%= form_for(@roster) do |f| %>
+  <% if @roster.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@roster.errors.count, "error") %> prohibited this roster from being saved:</h2>
+
+      <ul>
+      <% @roster.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :overall %><br>
+    <%= f.text_field :overall %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduling %><br>
+    <%= f.text_field :scheduling %>
+  </div>
+  <div class="field">
+    <%= f.label :fun %><br>
+    <%= f.text_field :fun %>
+  </div>
+  <div class="field">
+    <%= f.label :day %><br>
+    <%= f.text_field :day %>
+  </div>
+  <div class="field">
+    <%= f.label :night %><br>
+    <%= f.text_field :night %>
+  </div>
+  <div class="field">
+    <%= f.label :food %><br>
+    <%= f.text_field :food %>
+  </div>
+  <div class="field">
+    <%= f.label :contact1 %><br>
+    <%= f.text_field :contact1 %>
+  </div>
+  <div class="field">
+    <%= f.label :contact2 %><br>
+    <%= f.text_field :contact2 %>
+  </div>
+  <div class="field">
+    <%= f.label :contact3 %><br>
+    <%= f.text_field :contact3 %>
+  </div>
+  <div class="field">
+    <%= f.label :freq %><br>
+    <%= f.text_field :freq %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
