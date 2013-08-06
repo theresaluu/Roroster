@@ -8,6 +8,13 @@ GIT
       mongo (~> 1.8)
       plucky (~> 0.6.5)
 
+GIT
+  remote: http://github.com/rezwyi/jcountdown-rails.git
+  revision: 8a296ede6729e8413f9ee6afd82b147236f68cad
+  specs:
+    jcountdown-rails (0.2.0)
+      jquery-rails
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -140,6 +147,7 @@ DEPENDENCIES
   bson_ext
   coffee-rails (~> 4.0.0)
   jbuilder (~> 1.2)
+  jcountdown-rails!
   jquery-rails
   mongo_mapper!
   rails (= 4.0.0)

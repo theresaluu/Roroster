@@ -1,6 +1,7 @@
 class Roster
   include MongoMapper::Document
 
+  key :name, String
   key :overall, String
   key :scheduling, String
   key :fun, String

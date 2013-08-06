@@ -69,6 +69,6 @@ class RostersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roster_params
-      params.require(:roster).permit(:overall, :scheduling, :fun, :day, :night, :food, :contact1, :contact2, :contact3, :freq)
+      params.require(:roster).permit(:name, :overall, :scheduling, :fun, :day, :night, :food, :contact1, :contact2, :contact3, :freq)
     end
 end
