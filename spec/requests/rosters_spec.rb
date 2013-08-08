@@ -7,4 +7,11 @@ describe "Rosters" do
       expect(page).to have_content('Listing rosters')
     end
   end
+
+  describe "Roster page" do
+    it "should have the content 'Listing rosters'" do
+      visit '/roroster/home'
+      expect(page).to have_content('Listing rosters')
+    end
+  end
 end
