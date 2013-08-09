@@ -5,9 +5,11 @@ gem 'rails', '4.0.0'
 
 gem 'mongo_mapper', github: 'jnunemaker/mongomapper'
 gem 'bson_ext'
+gem 'mongomapper-paperclip', "~> 0.1.0"
 
 group :development, :test do
 	gem 'rspec-rails'
+	gem 'better_errors'
 end
 
 group :test do 
