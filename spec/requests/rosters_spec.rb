@@ -16,13 +16,23 @@ describe "Rosters" do
   end
 
   describe "Edit Page" do
-    it "should have the content 'Edit Mutha Fucka'" do
+    it "should have the content 'Edit Player Stats'" do
       roster = Roster.create()
       id = roster.id.to_s
-
       path = "/rosters/"+id+"/edit"
       visit path
-      expect(page).to have_content('')
+      expect(page).to have_content('Edit Player Stats')
     end
   end
+
+  describe "Show Page" do
+    it "should have the content 'Updated Player Stats'" do
+      roster = Roster.create()
+      id = roster.id.to_s
+      path = "/rosters/"+id
+      visit path
+      expect(page).to have_content('Updated Player Stats')
+    end
+  end
+
 end
