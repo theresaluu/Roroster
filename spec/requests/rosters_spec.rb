@@ -1,9 +1,11 @@
 require 'spec_helper'
 
-describe "Rosters" do
+
+
+describe "Rosters", :type => :feature do
   describe "Home page" do
     it "should have the content 'giving you full-court advantage'" do
-      visit '/roroster/home'
+      visit '/rosters/home'
       expect(page).to have_content('giving you full-court advantage')
     end
   end
@@ -34,5 +36,20 @@ describe "Rosters" do
       expect(page).to have_content('Updated Player Stats')
     end
   end
+
+  describe "Photo Page" do
+    it "should have the content 'Update Player Photo'" do
+      roster = Roster.create()
+      id = roster.id.to_s
+      puts id
+      path = "/rosters/"+id+"/photo"
+      visit path
+      expect(page).to have_content('Update Player Photo')
+    end
+  end
+
+  # describe "RostersController" do
+  #   it "initializes with rosters"
+  #   rosters = 
 
 end

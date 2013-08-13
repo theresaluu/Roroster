@@ -191,7 +191,7 @@ module Capybara
     # @return [Symbol]    The name of the driver used when JavaScript is needed
     #
     def javascript_driver
-      @javascript_driver || :selenium
+      @javascript_driver || :webkit
     end
 
     ##

@@ -7,6 +7,8 @@ Roroster::Application.routes.draw do
 
   get '/roroster/add' => 'rosters#new'
 
+  get '/rosters/:id/photo' => 'rosters#photo'
+
 
 
   # The priority is based upon order of creation: first created -> highest priority.
