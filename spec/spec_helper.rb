@@ -34,4 +34,5 @@ RSpec.configure do |config|
   config.formatter = :documentation
   config.order = "random"
   config.include Capybara::DSL
+  Capybara.javascript_driver = :webkit
 end

@@ -12,4 +12,6 @@ Set a countdown for each boyfriend/girlfriend that will be resetable and indicat
 Current Status: Aug 13, 2013
 I have been attempting to RSpec this project from the beginning and am currently stuck due to a Turbolinks/Capybara Webkit shitty issues.  All my tests that are supposed to be passing fail, and ironically, my test that should be failing passes.  If this doesn't clear soon, I'm going to chuck RSpecing to the side because I need this to be done on Friday instead of Wednesday next week. 
 
+PivotalTracker Link: https://www.pivotaltracker.com/s/projects/885840
+
 

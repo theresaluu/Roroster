@@ -3,10 +3,6 @@ Roroster::Application.routes.draw do
 
   root 'rosters#index'
 
-  get '/roroster/home' => 'rosters#index'
-
-  get '/roroster/add' => 'rosters#new'
-
   get '/rosters/:id/photo' => 'rosters#photo'
 
 

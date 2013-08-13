@@ -2,10 +2,10 @@ require 'spec_helper'
 
 
 
-describe "Rosters", :type => :feature do
+describe "Rosters", :type => :feature, :js =>true do 
   describe "Home page" do
     it "should have the content 'giving you full-court advantage'" do
-      visit '/rosters/home'
+      visit rosters_path
       expect(page).to have_content('giving you full-court advantage')
     end
   end
