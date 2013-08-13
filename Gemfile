@@ -6,6 +6,7 @@ gem 'rails', '4.0.0'
 gem 'mongo_mapper', github: 'jnunemaker/mongomapper'
 gem 'bson_ext'
 gem 'mongomapper-paperclip', "~> 0.1.0"
+gem 'carrierwave'
 
 group :development, :test do
 	gem 'rspec-rails'
