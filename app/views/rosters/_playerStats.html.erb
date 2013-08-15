@@ -1,0 +1,18 @@
+
+<% @rosters.each do |roster| %>
+      <div class= "left statBox span4">
+            <div class= "nameBox"><%= roster.name %></div>
+            <div><span class="choices"><%= link_to 'Edit', edit_roster_path(roster) %></span>
+            <span class= "choices"><%= link_to 'Destroy', roster, method: :delete, data: { confirm: 'Are you sure?' } %></span></div>
+            <div> Overall Meter: <%= roster.overall %></div>
+            <div> Scheduling Ease: <%= roster.scheduling %></div>
+            <div> Fun Meter: <%= roster.fun %></div>
+            <div> Avail Daytime: <%= roster.day %></div>
+            <div> Avail Nighttime: <%= roster.night %></div>
+            <div> Food Pref: <%= roster.food %></div>
+            <div> Contact Method 1: <%= roster.contact1 %></div>
+            <div> Contact Method 2: <%= roster.contact2 %></div>
+            <div> Contact Method 3: <%= roster.contact3 %></div>
+            <div> Contact Freq Desired: <%= roster.freq %></div>
+      </div>
+<% end %>

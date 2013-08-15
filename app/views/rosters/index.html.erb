@@ -1,48 +1,13 @@
 
-<div class="page-header">
+<div class="page-header topbar text-center">
   <h1>RoRoster <small>giving you full-court advantage</small></h1>
 </div>
+<div>
+<button class="btn"><%= link_to 'New Recruit', new_roster_path %></button
+	> 
+</div>
+<div class="playStats">
+  <%= render 'playerStats'%>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Overall</th>
-      <th>Scheduling</th>
-      <th>Fun</th>
-      <th>Day</th>
-      <th>Night</th>
-      <th>Food</th>
-      <th>Contact1</th>
-      <th>Contact2</th>
-      <th>Contact3</th>
-      <th>Freq</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @rosters.each do |roster| %>
-      <tr>
-        <td><%= roster.name %></td>
-        <td><%= roster.overall %></td>
-        <td><%= roster.scheduling %></td>
-        <td><%= roster.fun %></td>
-        <td><%= roster.day %></td>
-        <td><%= roster.night %></td>
-        <td><%= roster.food %></td>
-        <td><%= roster.contact1 %></td>
-        <td><%= roster.contact2 %></td>
-        <td><%= roster.contact3 %></td>
-        <td><%= roster.freq %></td>
-        <td><%= link_to 'Edit', edit_roster_path(roster) %></td>
-        <td><%= link_to 'Destroy', roster, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Roster', new_roster_path %>

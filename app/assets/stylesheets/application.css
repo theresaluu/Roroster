@@ -12,3 +12,6 @@
  *= require jcountdown
  *= require_tree .
  */
+ .left {
+ 	float: left;
+ }
