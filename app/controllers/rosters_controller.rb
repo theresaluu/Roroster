@@ -7,6 +7,13 @@ class RostersController < ApplicationController
     @rosters = Roster.all
   end
 
+  def remainingT
+    @rosters.each do |roster|
+      @remainingTime = (roster.deadline - Time.new)/1.day
+      puts remaind
+    end
+  end
+
   # GET /rosters/1
   # GET /rosters/1.json
   def show
@@ -25,6 +32,7 @@ class RostersController < ApplicationController
   # POST /rosters.json
   def create
     @roster = Roster.new(roster_params)
+    @roster.deadline =  Time.new + (@roster.freq.days)
 
     respond_to do |format|
       if @roster.save
@@ -41,7 +49,7 @@ class RostersController < ApplicationController
   # PATCH/PUT /rosters/1.json
   def update
     respond_to do |format|
-      if @roster.update(roster_params)
+      if @roster.update_attributes(roster_params)
         format.html { redirect_to @roster, notice: 'Roster was successfully updated.' }
         format.json { head :no_content }
       else
@@ -72,6 +80,7 @@ class RostersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def roster_params
-      params.require(:roster).permit(:name, :overall, :scheduling, :fun, :day, :night, :food, :contact1, :contact2, :contact3, :freq)
+      params.require(:roster).permit(:name, :overall, :scheduling, :fun, :day, :night, :food, :contact1, :contact2, :contact3, :freq, :deadline)
     end
-end
+  end
+

@@ -1,6 +1,7 @@
 
 <% @rosters.each do |roster| %>
       <div class= "span4"> 
+            <div class="clocks"> <script> var myCountdown1 = new Countdown({time:<% @remainingTime %>}); </script> </div>
             <div class= "nameBox"><%= roster.name %></div>
             <div class= "statBox">      
                   <div><span class="choices"><%= link_to 'Edit', edit_roster_path(roster) %></span>

@@ -1,11 +1,9 @@
+<div> <%= render 'banner'%> </div>
 
-<div class="page-header">
-  <h1>RoRoster <small>giving you full-court advantage</small></h1>
-</div>
+<div class="span1 offset10"><%= link_to 'Back', rosters_path %></div>
 
-<h2>Edit Player Stats</h2>
+<div class="nameBox span6 offset3"> <h2>Edit Player Stats</h2> </div>
+<div> <%= render 'form' %> </div>
 
-<%= render 'form' %>
-
-<%= link_to 'Show', @roster %>
-<%= link_to 'Back', rosters_path %>
+<div> <%= link_to 'Show', @roster %> </div>
+<div><%= link_to 'Back', rosters_path %> </div>

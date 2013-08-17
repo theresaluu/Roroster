@@ -7,6 +7,7 @@ gem 'mongo_mapper', github: 'jnunemaker/mongomapper'
 gem 'bson_ext'
 gem 'mongomapper-paperclip', "~> 0.1.0"
 gem 'carrierwave'
+gem 'binding_of_caller'
 
 group :development, :test do
 	gem 'rspec-rails'
